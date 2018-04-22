@@ -1,0 +1,8 @@
+-- Example 0
+10 2
+-- Answer 0
+21
+-- Example 1
+10 10
+-- Answer 1
+255

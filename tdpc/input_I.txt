@@ -1,0 +1,8 @@
+-- Example 0
+iwiwii
+-- Answer 0
+2
+-- Example 1
+iwiwwwiiiwiwiwiiwii
+-- Answer 1
+5

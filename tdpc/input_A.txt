@@ -1,0 +1,10 @@
+-- Example 0
+3
+2 3 5
+-- Answer 0
+7
+-- Example 1
+10
+1 1 1 1 1 1 1 1 1 1
+-- Answer 1
+11

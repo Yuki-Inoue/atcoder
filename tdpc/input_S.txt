@@ -1,0 +1,8 @@
+-- Example 0
+2 2
+-- Answer 0
+3
+-- Example 1
+5 8
+-- Answer 1
+950397139

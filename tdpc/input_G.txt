@@ -1,0 +1,10 @@
+-- Example 0
+eel
+6
+-- Answer 0
+Eel
+-- Example 1
+lexicographical
+100
+-- Answer 1
+capal
