@@ -1,0 +1,34 @@
+-- Example 0
+2 1000000007
+-- Answer 0
+2
+-- Example 1
+3 1000000009
+-- Answer 1
+118
+-- Example 2
+50 111111113
+-- Answer 2
+1456748
+-- Example 3
+3000 123456791
+-- Answer 3
+16369789
+-- Example 4
+N M
+-- Answer 4
+2 1000000007
+-- Example 5
+2
+-- Answer 5
+3 1000000009
+-- Example 6
+118
+-- Answer 6
+50 111111113
+-- Example 7
+1456748
+-- Answer 7
+3000 123456791
+-- Example 8
+16369789
