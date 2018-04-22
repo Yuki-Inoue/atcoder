@@ -1,0 +1,12 @@
+-- Example 0
+5 4
+-- Answer 0
+3
+-- Example 1
+1000000 10
+-- Answer 1
+0
+-- Example 2
+500000000 1000000000
+-- Answer 2
+500000000

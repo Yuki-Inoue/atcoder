@@ -1,0 +1,6 @@
+-- Example 0
+? s_1 s_2 … s_N
+-- Answer 0
+ans
+-- Example 1
+! a_1 a_2 … a_N
