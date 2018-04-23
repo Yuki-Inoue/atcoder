@@ -1,0 +1,34 @@
+-- Example 0
+3 3
+-- Answer 0
+20
+-- Example 1
+4 4
+-- Answer 1
+67
+-- Example 2
+7 9
+-- Answer 2
+7772
+-- Example 3
+1987 1789
+-- Answer 3
+456315553
+-- Example 4
+A B
+-- Answer 4
+3 3
+-- Example 5
+20
+-- Answer 5
+4 4
+-- Example 6
+67
+-- Answer 6
+7 9
+-- Example 7
+7772
+-- Answer 7
+1987 1789
+-- Example 8
+456315553

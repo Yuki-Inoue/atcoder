@@ -1,0 +1,42 @@
+-- Example 0
+6 5
+1 2
+2 3
+3 4
+4 5
+5 6
+-- Answer 0
+4
+-- Example 1
+5 5
+1 2
+2 3
+3 1
+5 4
+5 1
+-- Answer 1
+5
+-- Example 2
+N M
+A_1 B_1
+A_2 B_2
+:
+A_M B_M
+-- Answer 2
+6 5
+1 2
+2 3
+3 4
+4 5
+5 6
+-- Example 3
+4
+-- Answer 3
+5 5
+1 2
+2 3
+3 1
+5 4
+5 1
+-- Example 4
+5

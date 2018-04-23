@@ -1,0 +1,26 @@
+-- Example 0
+CODEFESTIVAL
+-- Answer 0
+CODE
+-- Example 1
+CODEFESTIVALFESTIVAL
+-- Answer 1
+CODEFESTIVAL
+-- Example 2
+YAKINIKUFESTIVAL
+-- Answer 2
+YAKINIKU
+-- Example 3
+S
+-- Answer 3
+CODEFESTIVAL
+-- Example 4
+CODE
+-- Answer 4
+CODEFESTIVALFESTIVAL
+-- Example 5
+CODEFESTIVAL
+-- Answer 5
+YAKINIKUFESTIVAL
+-- Example 6
+YAKINIKU
