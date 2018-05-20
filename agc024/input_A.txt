@@ -1,0 +1,26 @@
+-- Example 0
+1 2 3 1
+-- Answer 0
+1
+-- Example 1
+2 3 2 0
+-- Answer 1
+-1
+-- Example 2
+1000000000 1000000000 1000000000 1000000000000000000
+-- Answer 2
+0
+-- Example 3
+A B C K
+-- Answer 3
+1 2 3 1
+-- Example 4
+1
+-- Answer 4
+2 3 2 0
+-- Example 5
+-1
+-- Answer 5
+1000000000 1000000000 1000000000 1000000000000000000
+-- Example 6
+0

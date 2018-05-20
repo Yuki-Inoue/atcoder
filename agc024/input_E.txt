@@ -1,0 +1,26 @@
+-- Example 0
+2 2 100
+-- Answer 0
+5
+-- Example 1
+4 3 999999999
+-- Answer 1
+358
+-- Example 2
+150 150 998244353
+-- Answer 2
+186248260
+-- Example 3
+N K M
+-- Answer 3
+2 2 100
+-- Example 4
+5
+-- Answer 4
+4 3 999999999
+-- Example 5
+358
+-- Answer 5
+150 150 998244353
+-- Example 6
+186248260
