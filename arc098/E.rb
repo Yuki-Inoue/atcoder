@@ -2,19 +2,56 @@
 # ARC098 E
 # Your code here
 
-N, K, Q = gets.chomp.split(' ').map(&:to_i)
-A = gets.chomp.split(' ').map(&:to_i)
 
-sorted = A.sort
-
-diffs = (0..(N+1-Q-K)).map do |i|
-  sorted[i+Q-1] - sorted[i]
+module Enumerable
+  def split
+    current = nil
+    ret = []
+    each do |elem|
+      if yield elem
+        if current
+          ret << current
+          current = nil
+        end
+      elsif current
+        current << elem
+      else
+        current = [elem]
+      end
+    end
+    ret << current if current
+    ret
+  end
 end
 
-sorted_diffs = diffs.map.with_index do |diff, i|
-  [diff, i]
-end.sort
-
-sorted_diffs.each do |diff, i|
-
+class Array
+  def clip(amount = 1)
+    take_amount = size - amount
+    take_amount < 0 ? [] : take(take_amount)
+  end
 end
+
+x_ys = (0...N).map do |i|
+  y = A[i]
+  groups = A.split { |e| e < y }
+  selectables = groups
+    .map { |group| group.sort.clip K - 1 }
+    .flatten(1)
+    .sort
+  x = (selectables.drop 1)[Q - 2]
+  x && x - y
+end
+
+def read_stdin
+  n, k, q = gets.chomp.split(' ').map(&:to_i)
+  a = gets.chomp.split(' ').map(&:to_i)
+  [n, k, q, a]
+end
+
+# def example_1
+#   [5, 3, 2, [4, 3, 1, 5, 2]]
+# end
+
+N, K, Q, A = read_stdin
+
+puts x_ys.reject(&:nil?).min
