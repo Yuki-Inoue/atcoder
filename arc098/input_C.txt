@@ -1,0 +1,33 @@
+-- Example 0
+5
+WEEWW
+-- Answer 0
+1
+-- Example 1
+12
+WEWEWEEEWWWE
+-- Answer 1
+4
+-- Example 2
+8
+WWWWWEEE
+-- Answer 2
+3
+-- Example 3
+N
+S
+-- Answer 3
+5
+WEEWW
+-- Example 4
+1
+-- Answer 4
+12
+WEWEWEEEWWWE
+-- Example 5
+4
+-- Answer 5
+8
+WWWWWEEE
+-- Example 6
+3
