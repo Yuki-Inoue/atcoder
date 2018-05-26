@@ -1,0 +1,94 @@
+-- Example 0
+3
+B 1
+W 2
+B 3
+W 1
+W 3
+B 2
+-- Answer 0
+4
+-- Example 1
+4
+B 4
+W 4
+B 3
+W 3
+B 2
+W 2
+B 1
+W 1
+-- Answer 1
+18
+-- Example 2
+9
+W 3
+B 1
+B 4
+W 1
+B 5
+W 9
+W 2
+B 6
+W 5
+B 3
+W 8
+B 9
+W 7
+B 2
+B 8
+W 4
+W 6
+B 7
+-- Answer 2
+41
+-- Example 3
+N
+c_1 a_1
+c_2 a_2
+:
+c_{2N} a_{2N}
+-- Answer 3
+3
+B 1
+W 2
+B 3
+W 1
+W 3
+B 2
+-- Example 4
+4
+-- Answer 4
+4
+B 4
+W 4
+B 3
+W 3
+B 2
+W 2
+B 1
+W 1
+-- Example 5
+18
+-- Answer 5
+9
+W 3
+B 1
+B 4
+W 1
+B 5
+W 9
+W 2
+B 6
+W 5
+B 3
+W 8
+B 9
+W 7
+B 2
+B 8
+W 4
+W 6
+B 7
+-- Example 6
+41
