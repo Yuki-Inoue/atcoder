@@ -1,0 +1,12 @@
+-- Example 0
+2 5 4
+-- Answer 0
+2
+-- Example 1
+2 6 3
+-- Answer 1
+5
+-- Example 2
+31 41 5
+-- Answer 2
+23
