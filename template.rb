@@ -6,6 +6,9 @@
 # my lib
 
 module Enumerable
+  # work just like String#split,
+  # except this method does not use regex match
+  # but check whether yield succeeds or not.
   def split
     current = nil
     ret = []
@@ -27,6 +30,7 @@ module Enumerable
 end
 
 class Array
+  # truncate tail, opposite of drop
   def clip(amount = 1)
     take_amount = size - amount
     take_amount < 0 ? [] : take(take_amount)
