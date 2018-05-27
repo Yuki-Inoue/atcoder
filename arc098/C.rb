@@ -5,31 +5,52 @@
 N = gets.chomp.to_i
 S = gets.chomp
 
-[:left, :right].map { |d| [d, {left: 0, right: 0}] }.to_h
-
-acc = {
-  left: Array.new(N+1),
-  right: Array.new(N+1)
-}
-
-acc[:left][0] = { left: 0, right: 0 }
-acc[:right][N] = { left: 0, right: 0 }
-
-N.times do |i|
-  if S[i] == 'W'
-    acc[:left][i + 1] = { left: acc[:left][i][:left] + 1, right: acc[:left][i][:right] }
-  else
-    acc[:left][i + 1] = { left: acc[:left][i][:left], right: acc[:left][i][:right] + 1 }
-  end
-  if S[N - i - 1] == 'W'
-    acc[:right][N - i - 1] = { left: acc[:right][N - i][:left] + 1, right: acc[:right][N - i][:right] }
-  else
-    acc[:right][N - i - 1] = { left: acc[:right][N - i][:left], right: acc[:right][N - i][:right] + 1 }
+class World
+  def acc
+    @acc ||=
+      begin
+        acc = []
+        N.times do |i|
+          s_i = to_s_index i
+          acc << (acc.last || 0) +
+                 (S[s_i] == normal_dir ? 0 : 1)
+        end
+        acc
+      end
   end
 end
 
-mins = (0...N).map do |i|
-  acc[:left][i][:left] + acc[:right][i + 1][:right]
+class NormalWorld < World
+  def normal_dir
+    'E'
+  end
+
+  def to_s_index(i)
+    i
+  end
 end
+
+class ReverseWorld < World
+  def normal_dir
+    'W'
+  end
+
+  def to_s_index(i)
+    N - i - 1
+  end
+end
+
+normal = NormalWorld.new
+reverse = ReverseWorld.new
+
+mins = (1...(N - 1)).map do |i|
+  normal_acc = normal.acc[i - 1]
+  reverse_acc = reverse.acc[N - i - 1]
+  # puts [normal_acc, reverse_acc].inspect
+  normal_acc + reverse_acc
+end
+
+mins << normal.acc[N - 1]
+mins << reverse.acc[N - 1]
 
 puts mins.min
