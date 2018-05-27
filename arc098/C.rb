@@ -5,48 +5,41 @@
 N = gets.chomp.to_i
 S = gets.chomp
 
-class World
-  def acc
+normal = Object.new
+def normal.dir
+  'E'
+end
+def normal.to_s_index(i)
+  i
+end
+
+reverse = Object.new
+def reverse.dir
+  'W'
+end
+
+def reverse.to_s_index(i)
+  N - i - 1
+end
+
+[normal, reverse].each do |world|
+  def world.acc
     @acc ||=
       begin
         acc = []
         N.times do |i|
           s_i = to_s_index i
           acc << (acc.last || 0) +
-                 (S[s_i] == normal_dir ? 0 : 1)
+                 (S[s_i] == dir ? 0 : 1)
         end
         acc
       end
   end
 end
 
-class NormalWorld < World
-  def normal_dir
-    'E'
-  end
-
-  def to_s_index(i)
-    i
-  end
-end
-
-class ReverseWorld < World
-  def normal_dir
-    'W'
-  end
-
-  def to_s_index(i)
-    N - i - 1
-  end
-end
-
-normal = NormalWorld.new
-reverse = ReverseWorld.new
-
 mins = (1...(N - 1)).map do |i|
   normal_acc = normal.acc[i - 1]
   reverse_acc = reverse.acc[N - i - 1]
-  # puts [normal_acc, reverse_acc].inspect
   normal_acc + reverse_acc
 end
 
