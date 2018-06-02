@@ -1,0 +1,20 @@
+-- Example 0
+79
+6
+-- Answer 0
+78
+-- Example 1
+100
+100
+-- Answer 1
+100
+-- Example 2
+43
+5
+-- Answer 2
+40
+-- Example 3
+56
+1
+-- Answer 3
+56

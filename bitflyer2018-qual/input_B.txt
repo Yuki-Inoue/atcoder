@@ -1,0 +1,24 @@
+-- Example 0
+3 2 3
+SEC
+-- Answer 0
+1
+1
+-- Example 1
+2 4 6
+SSSEEE
+-- Answer 1
+0
+1
+-- Example 2
+0 3 6
+SEECEE
+-- Answer 2
+0
+0
+-- Example 3
+100 99 9
+SSSEEECCC
+-- Answer 3
+96
+94
