@@ -47,16 +47,22 @@ X = gets.chomp.split(' ').map(&:to_i)
 ret = 0
 
 (0...(N - 2)).each do |i|
-  k = i + 2
+  j = i + 1
+  prev_k = nil
   loop do
-    k += 1 while k < N && X[k] - X[i] <= D
-    break if k == N
-    ((i + 1)...k).each do |j|
-      next if X[k] - X[j] > D
-      break if X[j] - X[i] > D
-      ret += 1
+    break if j == N || X[j] - X[i] > D
+    k = prev_k
+    prev_k = nil
+    k ||= j + 1
+    loop do
+      break if k == N || X[k] - X[j] > D
+      if X[k] - X[i] > D
+        ret += 1
+        prev_k = k unless prev_k
+      end
+      k += 1
     end
-    k += 1
+    j += 1
   end
 end
 
