@@ -38,7 +38,7 @@ class Array
 end
 
 def n_choose_k(n, k)
-  return 0 if k > n
+  return 0 unless (0..n).cover? k
   result = 1
   1.upto(k) do |d|
     result *= n
