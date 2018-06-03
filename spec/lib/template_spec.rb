@@ -25,3 +25,7 @@ describe 'Array#clip' do
     expect { a.clip(-1) }.to raise_error ArgumentError
   end
 end
+
+describe 'Enumerable#split' do
+  it 'normal operation'
+end
