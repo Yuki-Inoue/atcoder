@@ -37,6 +37,17 @@ class Array
   end
 end
 
+def n_choose_k(n, k)
+  return 0 if k > n
+  result = 1
+  1.upto(k) do |d|
+    result *= n
+    result /= d
+    n -= 1
+  end
+  result
+end
+
 # end of lib
 
 # Your code here
@@ -44,26 +55,28 @@ end
 N, D = gets.chomp.split(' ').map(&:to_i)
 X = gets.chomp.split(' ').map(&:to_i)
 
-ret = 0
-
-(0...(N - 2)).each do |i|
-  j = i + 1
-  prev_k = nil
-  loop do
-    break if j == N || X[j] - X[i] > D
-    k = prev_k
-    prev_k = nil
-    k ||= j + 1
-    loop do
-      break if k == N || X[k] - X[j] > D
-      if X[k] - X[i] > D
-        ret += 1
-        prev_k = k unless prev_k
-      end
-      k += 1
-    end
-    j += 1
-  end
+LEFT = Array.new(N) do |i|
+  j = X.bsearch_index { |x| X[i] - x <= D }
+  i - j
 end
 
-puts ret
+RIGHT = Array.new(N) do |i|
+  j = X.bsearch_index { |x| x - X[i] > D }
+  j ||= N
+  j - i - 1
+end
+
+close_tuples = (0 ... N - 2).map do |i|
+  n_choose_k RIGHT[i], 2
+end
+
+# $stderr.puts RIGHT.inspect
+# $stderr.puts close_tuples.inspect
+
+comb_for_j = (1 ... N - 1).map do |j|
+  LEFT[j] * RIGHT[j]
+end
+
+# $stderr.puts comb_for_j.inspect
+
+puts comb_for_j.reduce(&:+) - close_tuples.reduce(&:+)
