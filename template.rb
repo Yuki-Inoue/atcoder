@@ -37,6 +37,17 @@ class Array
   end
 end
 
+def n_choose_k(n, k)
+  return 0 if k > n
+  result = 1
+  1.upto(k) do |d|
+    result *= n
+    result /= d
+    n -= 1
+  end
+  result
+end
+
 # end of lib
 
 # Your code here
