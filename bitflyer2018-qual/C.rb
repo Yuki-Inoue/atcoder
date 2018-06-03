@@ -38,7 +38,8 @@ class Array
 end
 
 def n_choose_k(n, k)
-  return 0 if k > n
+  return 0 unless (0..n).cover? k
+  k = [k, n - k].min
   result = 1
   1.upto(k) do |d|
     result *= n
@@ -66,14 +67,14 @@ RIGHT = Array.new(N) do |i|
   j - i - 1
 end
 
-close_tuples = (0 ... N - 2).map do |i|
+close_tuples = (0...N - 2).map do |i|
   n_choose_k RIGHT[i], 2
 end
 
 # $stderr.puts RIGHT.inspect
 # $stderr.puts close_tuples.inspect
 
-comb_for_j = (1 ... N - 1).map do |j|
+comb_for_j = (1...N - 1).map do |j|
   LEFT[j] * RIGHT[j]
 end
 
