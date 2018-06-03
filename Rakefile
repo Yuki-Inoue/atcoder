@@ -1,6 +1,8 @@
-require "rspec/core/rake_task"
 
-RSpec::Core::RakeTask.new("spec")
+require_relative 'config/boot'
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new('spec')
 
 desc 'Registers lib/template.rb'
 task :register_template do
