@@ -1,0 +1,2 @@
+
+gem 'atcoder_greedy'
