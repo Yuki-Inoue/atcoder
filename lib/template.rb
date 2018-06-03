@@ -32,6 +32,9 @@ end
 class Array
   # truncate tail, opposite of drop
   def clip(amount = 1)
+    if amount < 0
+      raise ArgumentError, "amount == #{amount}, cannot be negative!"
+    end
     take_amount = size - amount
     take_amount < 0 ? [] : take(take_amount)
   end
