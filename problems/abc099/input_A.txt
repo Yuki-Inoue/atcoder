@@ -1,0 +1,26 @@
+-- Example 0
+999
+-- Answer 0
+ABC
+-- Example 1
+1000
+-- Answer 1
+ABD
+-- Example 2
+1481
+-- Answer 2
+ABD
+-- Example 3
+N
+-- Answer 3
+999
+-- Example 4
+ABC
+-- Answer 4
+1000
+-- Example 5
+ABD
+-- Answer 5
+1481
+-- Example 6
+ABD
